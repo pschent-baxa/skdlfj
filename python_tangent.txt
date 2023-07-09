@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# x값 설정
+x = np.arange(-8,8,0.1);
+
+# y값 설정
+amplitude = np.tan(x)
+print("amp: ", amplitude)
+
+plt.xticks(np.arange(-7.85,8,1.57)) #1간격으로
+plt.yticks(np.arange(-50,50,10)) #3간격으로
+
+# 축 이름 설정
+plt.xlabel('x (radian)')
+plt.ylabel('y')
+
+# 그리드 추가
+plt.grid(color = "gray", alpha=.9,linestyle='--')
+plt.plot(x,amplitude,label='sine')
+
+# 범례 작성
+plt.legend()
+plt.show()

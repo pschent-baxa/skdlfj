@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# x값 범위 설정
+x = np.arange(-13,13,0.1);
+
+# y값 범위 설정
+amplitude = np.cos(x)
+print("amp: ", amplitude)
+
+plt.xticks(np.arange(-12.56,13,3.14)) #x축 단위 3.14간격으로
+plt.yticks(np.arange(-1.5,1.5,0.5)) #y축 단위 0.5간격으로
+
+# 축 이름 설정
+plt.xlabel('x (radian)')
+plt.ylabel('y')
+
+# 격자 추가
+plt.grid(color = "gray", alpha=.9,linestyle='--')
+plt.plot(x,amplitude,label='cosine')
+
+# 범례 표시
+plt.legend()
+plt.show()
